@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {Header, Carousel, Container, Tumblr, BestDressed} from './App';
+import {Header, Carousel, BestDressed} from './App';
 import * as serviceWorker from './serviceWorker';
 import RSSWidget from './rss/RSSReader'
 
