@@ -1,64 +1,44 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import './App.css';
-import FlipPage from 'react-flip-page';
+import TextLoop from "react-text-loop";
 
-const nicknames = ['chynna', 'chyn', 'chy', 'chunna']
+const nicknames = ['chynna', 'chyn', 'chy', 'chunna'];
 
-function pickNickname(nicknames){
-
-  var rand = Math.random();
-  var i = Math.floor(rand * Math.floor(nicknames.length));
-
-  return nicknames[i]
-}
-
-class Header_old extends React.Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-      nicknames: nicknames,
-      currentIndex: 0,
-    };
-    this.flippage = useRef(null);
-  }
-
-  updateNickname() {
-    if(this.state.currentIndex === this.state.nicknames.length - 1) {
-      this.setState({
-        currentIndex: 0
-      });
-    } else {
-      this.setState({
-        currentIndex: this.state.currentIndex + 1
-      });
+class Title extends React.Component {
+    render() {
+        const nameObj = nicknames.map((nickname, pos) => {
+            if(nickname === "chynna"){
+                return (<h1><div>{nickname}</div></h1>)
+            } else {
+                return (
+                    <h2>
+                        <div>{nickname}</div>
+                    </h2>
+                )
+            }
+        });
+        return(
+            <TextLoop mask="true">
+                {nameObj}
+            </TextLoop>
+        )
     }
-  }
-
-  goNext() {
-    this.flippage.gotoNextPage();
-  }
-
-  render() {
-    return(
-        <FlipPage loopForever="true" ref={(component) => {this.flippage = component;}}>
-        <article><div id="header"><h1>chyn</h1></div></article>
-          <article><div id="header"><h1>chunna</h1></div></article>
-        </FlipPage>
-    )
-
-  }
-  componentDidMount() {
-    this.interval = setInterval(() => {this.flippage.gotoNextPage();},3000);
-  }
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
 }
 
-function App() {
-  return (
-  <Header_old />
+class Header extends React.Component {
+    render(){
+        return(
+            <div id="header">
+            <Title />
+            </div>
+        )
+    }
+}
+
+class App extends React.Component {
+  render(){return (
+        <Header />
   );
-}
+}}
 
 export default App;

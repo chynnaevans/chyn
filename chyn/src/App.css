@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+:root {
+  --light-accent: #E0B0D5;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -46,15 +50,22 @@ body {
 #header {
   height: 20%;
   min-height: 100px;
-  background-color: black;
+  background-color: white;
   width: 100%;
   padding: 1%;
 
 }
 
 #header h1 {
-  color: white;
+  color: var(--light-accent);
   font-size:40px;
-  line-height: 100px;
+  line-height: 30px;
+  vertical-align: middle;
+}
+
+#header h2 {
+  color: lightgrey;
+  font-size:40px;
+  line-height: 30px;
   vertical-align: middle;
 }
