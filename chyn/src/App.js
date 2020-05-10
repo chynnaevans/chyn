@@ -33,14 +33,35 @@ class Title extends React.Component {
     }
 }
 
+
+
 class Header extends React.Component {
-    render(){
-        return(
+        renderButton(name, value){
+            return(
+                <div id="menuObj">
+                    <button onClick={this.props.handleClick(value)}>{this.props.value}</button>
+                </div>
+            )
+        }
+
+        render(){
+            return(
             <div id="header">
-            <Title />
+                <div id="menuObj">
+                    <Title />
+                </div>
+                <div id="menuObj">
+                    <button onClick={() => this.props.handleClick('metgalaoutfits')}>Best Dressed</button>
+                </div>
+                <div id="menuObj">
+                    <button onClick={() => this.props.handleClick('metgalathemes')}>Top Themes</button>
+                </div>
+                <div id="menuObj">
+                    <button onClick={() => this.props.handleClick('metgaladesigns')}>2020 Designs</button>
+                </div>
             </div>
-        )
-    }
+        )}
+
 }
 
 class Carousel extends React.Component {
@@ -62,15 +83,51 @@ class Carousel extends React.Component {
 }
 
 class BestDressed extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            query: this.props.currentPage,
+            pageTitle: this.props.pageTitle,
+        }
+    }
     render(){
         return(
            <div id="container">
                <Carousel />
-               <RSSWidget url="http://amateurish.tumblr.com/rss/?5" title="Best Dressed" />
+               <RSSWidget url="http://amateurish.tumblr.com/rss/" title={this.props.pageTitle} category={this.props.currentPage} />
            </div>
         )
     }
 }
 
+class MetGalaContent extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            page: 'metgalaoutfits',
+            menu: {
+                'metgalaoutfits': 'All Time Top 8 Outfits',
+                'metgalathemes': 'All Time Top Themes',
+                'metgaladesigns': 'About Time: Fashion and Duration. By Chynna'
+            }
+        }
+    }
+
+    handleClick(pageIndex) {
+        this.setState({
+            page: pageIndex,
+        });
+    }
+
+    render() {
+            return (
+                <div>
+                    <Header handleClick={(i) => {this.handleClick(i)}} />
+                    <BestDressed currentPage={this.state.page} pageTitle={this.state.menu[this.state.page]}/>
+                </div>
+            )
+    }
+}
+
 // export default Header;
-export {Header, BestDressed};
+export {Header, BestDressed, MetGalaContent};

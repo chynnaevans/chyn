@@ -10,11 +10,11 @@ class RSSWidget extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            url: props.url,
+            url: this.props.url,
             listings: [],
             data: {},
-            pageTitle: props.title,
-            query: (props.category === '' ? '' : '?category=' + props.cateogry),
+            pageTitle: this.props.title,
+            query: (this.props.category === '' ? '' : '?category=' + props.cateogry),
         }
     }
 
@@ -43,7 +43,7 @@ class RSSWidget extends React.Component{
             <div id="mainText">
                 <div id="fullCard">
                     <h1>
-                        {this.state.pageTitle}
+                        {this.props.title}
                     </h1>
                 </div>
 
@@ -63,7 +63,7 @@ class RSSWidget extends React.Component{
     }
     async componentDidMount(){
         try {
-            const resp = await getFeedListing(this.state.url + this.state.query);
+            const resp = await getFeedListing(this.state.url +  '?category=' + this.props.cateogry);
             this.setState({
                 listings: resp.data.items,
                 data: resp.data.feed,
