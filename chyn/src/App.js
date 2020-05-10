@@ -188,7 +188,7 @@ class BestDressed extends React.Component {
         return(
            <div id="container">
                <Carousel />
-               <RSSWidget url="http://amateurish.tumblr.com/rss/?3" title="Best Dressed" />
+               <RSSWidget url="http://amateurish.tumblr.com/rss/?5" title="Best Dressed" />
            </div>
         )
     }

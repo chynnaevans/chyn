@@ -14,21 +14,8 @@ class RSSWidget extends React.Component{
             listings: [],
             data: {},
             pageTitle: props.title,
+            query: (props.category === '' ? '' : '?category=' + props.cateogry),
         }
-    }
-
-    parseDescription(desc){
-        const header = /<h1>([.\s]*)<\/h1>/gi;
-        const subheader = /<h2>([.\s]*)<\h2>/gi;
-        const info = /<h3>([.\s]*)<\h3>/gi;
-
-        return(
-            <div id="mainCard">
-                <h2>desc.match(header)</h2>
-                <h3>desc.match(subheader)</h3>
-                <p>desc.match(info)</p>
-            </div>
-        )
     }
 
     render(){
@@ -54,7 +41,7 @@ class RSSWidget extends React.Component{
 
         return(
             <div id="mainText">
-                <div id="mainHeader">
+                <div id="fullCard">
                     <h1>
                         {this.state.pageTitle}
                     </h1>
@@ -64,7 +51,7 @@ class RSSWidget extends React.Component{
                     return(
                         <div id="fullCard">
                             {parseDescription(listing.description)}
-                            <div id="mainCard">
+                        <div id="mainCard">
                             <img src={listing.thumbnail} />
                         </div>
                         </div>
@@ -76,7 +63,7 @@ class RSSWidget extends React.Component{
     }
     async componentDidMount(){
         try {
-            const resp = await getFeedListing(this.state.url);
+            const resp = await getFeedListing(this.state.url + this.state.query);
             this.setState({
                 listings: resp.data.items,
                 data: resp.data.feed,
