@@ -17,8 +17,41 @@ class RSSWidget extends React.Component{
         }
     }
 
+    parseDescription(desc){
+        const header = /<h1>([.\s]*)<\/h1>/gi;
+        const subheader = /<h2>([.\s]*)<\h2>/gi;
+        const info = /<h3>([.\s]*)<\h3>/gi;
+
+        return(
+            <div id="mainCard">
+                <h2>desc.match(header)</h2>
+                <h3>desc.match(subheader)</h3>
+                <p>desc.match(info)</p>
+            </div>
+        )
+    }
+
     render(){
-        const listings = this.state.listings.slice()
+        const listings = this.state.listings.slice();
+
+        function parseDescription(desc){
+            const header = /<h1>(.*)<\/h1>/gi;
+            const subheader = /<h2>(.*)<\/h2>/gi;
+            const info = /<h3>(.*)<\/h3>/gi;
+
+            const h1 = desc.match(header) ? desc.match(header)[0].replace(/<[a-z0-9\/]+>/gi, '') : 'Untitled';
+            const h2 = desc.match(subheader) ? desc.match(subheader)[0].replace(/<[a-z0-9\/]+>/gi, '') : '';
+            const p = desc.match(info) ? desc.match(info)[0].replace(/<[a-z0-9\/]+>/gi, '') : '';
+
+            return(
+                <div id="mainCard">
+                    <h2>{h1}</h2>
+                    <h3>{h2}</h3>
+                    <p>{p}</p>
+                </div>
+            )
+        }
+
         return(
             <div id="mainText">
                 <div id="mainHeader">
@@ -30,9 +63,8 @@ class RSSWidget extends React.Component{
                 {listings.map((listing, item) => {
                     return(
                         <div id="fullCard">
-                        <div id="mainCard">
-                            <h2>{listing.title}</h2>
-                        </div><div id="mainCard">
+                            {parseDescription(listing.description)}
+                            <div id="mainCard">
                             <img src={listing.thumbnail} />
                         </div>
                         </div>

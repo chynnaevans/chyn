@@ -14,7 +14,7 @@ ReactDOM.render(
 
 ReactDOM.render(
     <React.StrictMode>
-        <RSSWidget url="http://eat-dust.tumblr.com/rss" title="Tumblr Feed" />
+        <RSSWidget url="https://eat-dust.tumblr.com/rss/?orderby=pubDate" title="Tumblr Feed" />
     </React.StrictMode>,
     document.getElementById('container')
 );
