@@ -10,15 +10,6 @@ import beyonce from './13-beyonce-punk.jpg'
 import blake from './14-blakelively.jpeg'
 import zendaya from './15-zendaya.jpg'
 
-import dress8 from './8dress-stellamaxwell-19.jpg'
-import dress7 from './7dress-yolandahadid-17.jpg'
-import dress6 from './6dress-naomicampbell-16.jpg'
-import dress5 from './5dress-karolinakurkova-12.jpg'
-import dress4 from './4dress-caradelevigne-13.jpg'
-import dress3 from './3dress-jlo-15.jpg'
-import dress2 from './2dress-naomicampbell-95.jpg'
-import dress1 from './1dress-amcqueen-06.jpg'
-
 const nicknames = ['chynna', 'chyn', 'chy', 'chunna'];
 
 class Title extends React.Component {
