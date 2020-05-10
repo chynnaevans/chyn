@@ -9,6 +9,8 @@
   --dark-accent: #19647E;
   --bright-accent: #AEE5D8;
   --dark-main: #37392E;
+  font-family: Heebo;
+  font-weight: 300;
 }
 
 .App-logo {
@@ -48,6 +50,7 @@
 
 body {
   background-color: white;
+  overflow: hidden;
 }
 
 #header {
@@ -64,6 +67,8 @@ body {
   font-size:40px;
   line-height: 30px;
   vertical-align: middle;
+  font-family: Heebo;
+  font-weight: 300;
 }
 
 #header h2 {
@@ -71,8 +76,132 @@ body {
   font-size:40px;
   line-height: 30px;
   vertical-align: middle;
+  font-family: Heebo;
+  font-weight: 300;
 }
 
 #container {
-  background-color: #61dafb;
+  width:100%;
+  height: 100%;
+  position: fixed;
+  font-size: 18px;
+  color: var(--dark-main);
+  font-family: Heebo;
+  overflow-y: scroll;
+  float: left;
+}
+
+#container h1 {
+  font-weight: 500;
+  font-size: 1.5em;
+  color: var(--dark-main);
+}
+
+#container h2 {
+  font-weight: 500;
+  font-size: 1em;
+  color: var(--main-accent);
+}
+
+#container h3 {
+  font-weight: 300;
+  font-size: 1.5em;
+  color: var(--dark-main);
+  font-family: Heebo;
+}
+
+#carousel {
+  width: 100%;
+  height: 50%;
+  min-height: 300px;
+  position: relative;
+  padding: 0px;
+  float:left;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#carousel img {
+  width: 20%;
+  object-position: 40% 0;
+  padding-right: 10px;
+  vertical-align: top;
+  float: start;
+  min-height: 110%;
+  flex-wrap: nowrap;
+  object-fit: cover;
+  z-index: 1;
+  min-width: 300px;
+}
+
+#infoBox {
+  background-color: white;
+  height: 90px;
+  width: 400px;
+  z-index: 100;
+  position: absolute;
+  color: black;
+  bottom: 20px;
+  margin-left: 20px;
+  padding: 10px;
+  float: left;
+}
+
+#infoBox h1 {
+  line-height: 15px;
+  font-weight: 500;
+  font-size: 30px;
+  background-size: 70%;
+  background-color: var(--main-accent)
+}
+
+#infoBox p {
+  font-size: 20px;
+}
+
+#mainText {
+  float: left;
+  display: block;
+  clear: both;
+  position: static;
+  margin-bottom: 0px;
+
+  padding: 10px;
+  padding-left: 30px;
+  width: 100%;
+  float: top;
+
+  padding-bottom: 150px;
+}
+#mainHeader {
+  width: 100%;
+}
+#mainCard {
+  width: 40%;
+  position: static;
+  float: left;
+  display: table-cell;
+  margin-right: 10%;
+}
+
+#mainCard h2 {
+  font-weight: 300;
+  font-size: 1.5em;
+  color: var(--dark-main);
+  font-family: Heebo;
+  margin-bottom: 0px;
+}
+
+#mainCard h3 {
+  font-weight: 500;
+  font-size: 1em;
+  color: var(--main-accent);
+  margin-top: 0px;
+}
+
+#mainCard img {
+  width: 500px;
+  overflow: hidden;
+  object-fit: cover;
 }
