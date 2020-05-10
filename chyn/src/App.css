@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;500&display=swap');
 .App {
   text-align: center;
 }
 
 :root {
-  --light-accent: #E0B0D5;
+  --main-accent: #E0B0D5;
+  --faded-accent: #E5D0E3;
+  --dark-accent: #19647E;
+  --bright-accent: #AEE5D8;
+  --dark-main: #37392E;
 }
 
 .App-logo {
@@ -41,8 +46,6 @@
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;500&display=swap');
-
 body {
   background-color: white;
 }
@@ -57,7 +60,7 @@ body {
 }
 
 #header h1 {
-  color: var(--light-accent);
+  color: var(--main-accent);
   font-size:40px;
   line-height: 30px;
   vertical-align: middle;
@@ -68,4 +71,8 @@ body {
   font-size:40px;
   line-height: 30px;
   vertical-align: middle;
+}
+
+#container {
+  background-color: #61dafb;
 }

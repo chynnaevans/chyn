@@ -35,10 +35,11 @@ class Header extends React.Component {
     }
 }
 
-class App extends React.Component {
+class Container extends React.Component {
   render(){return (
-        <Header />
+        <div id="container"></div>
   );
 }}
 
-export default App;
+// export default Header;
+export {Container, Header};
