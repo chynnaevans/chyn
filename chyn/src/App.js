@@ -85,7 +85,7 @@ class Container extends React.Component {
             </div>
 
             <div id="mainText">
-                <div id="mainHeader">
+                <div id="fullCard">
                     <h1>Top 8 Outfits</h1>
                 </div>
 

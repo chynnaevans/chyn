@@ -175,7 +175,7 @@ body {
 
   padding-bottom: 150px;
 }
-#mainHeader {
+#fullCard {
   width: 100%;
 }
 #mainCard {
@@ -205,4 +205,8 @@ body {
   width: 500px;
   overflow: hidden;
   object-fit: cover;
+}
+
+#tumblr description {
+  font-size:1000px;
 }

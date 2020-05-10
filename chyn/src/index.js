@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {Header, Carousel, Container} from './App';
+import {Header, Carousel, Container, Tumblr} from './App';
 import * as serviceWorker from './serviceWorker';
+import RSSWidget from './rss/RSSReader'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,7 +14,7 @@ ReactDOM.render(
 
 ReactDOM.render(
     <React.StrictMode>
-        <Container />
+        <RSSWidget url="http://eat-dust.tumblr.com/rss" title="Tumblr Feed" />
     </React.StrictMode>,
     document.getElementById('container')
 );
