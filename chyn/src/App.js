@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import TextLoop from "react-text-loop";
+import RSSWidget from "./rss/RSSReader";
 
 // Carousel images
 import sjp from './11-sjp-savagebeauty.jpg'
@@ -182,5 +183,16 @@ class Container extends React.Component {
   );
 }}
 
+class BestDressed extends React.Component {
+    render(){
+        return(
+           <div id="container">
+               <Carousel />
+               <RSSWidget url="http://amateurish.tumblr.com/rss/?3" title="Best Dressed" />
+           </div>
+        )
+    }
+}
+
 // export default Header;
-export {Container, Header, Carousel};
+export {Container, Header, BestDressed};
