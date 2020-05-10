@@ -88,6 +88,7 @@ body {
   color: var(--dark-main);
   font-family: Heebo;
   overflow-y: scroll;
+  overflow-x: hidden;
   float: left;
 }
 
