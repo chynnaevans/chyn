@@ -54,11 +54,12 @@ body {
 }
 
 #header {
-  height: 100px;
+  height: 20%;
   min-height: 100px;
   background-color: white;
   width: 100%;
   padding: 1%;
+
 }
 
 #header h1 {
@@ -77,38 +78,6 @@ body {
   vertical-align: middle;
   font-family: Heebo;
   font-weight: 300;
-}
-
-#menuObj {
-  float:left;
-  display: inline-grid;
-  width: 150px;
-}
-
-#menuObj button {
-  vertical-align: middle;
-  width: 150px;
-  height: 40px;
-  background-color: white;
-  background-image: none;
-  border: none;
-  font: inherit;
-  margin-top: 25px;
-}
-
-#menuObj button:hover{
-  background-image: none;
-  border:none;
-  font: inherit;
-  border-bottom: var(--main-accent) 1px solid;
-}
-
-#menoObj button:active{
-  background-color: var(--main-accent);
-}
-
-#menuObj button:focus{
-  outline: 0px;
 }
 
 #container {
