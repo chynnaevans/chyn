@@ -1,7 +1,5 @@
 import '../App.css';
-import React, {useState} from 'react';
-import querysearch from 'querystring'
-
+import React from 'react';
 const axios = require("axios");
 const corsUrl = "https://api.rss2json.com/v1/api.json?rss_url=";
 export const getFeedListing = url => axios.get(`${corsUrl}${url}`);
@@ -26,9 +24,9 @@ class RSSWidget extends React.Component{
             const subheader = /<h2>(.*)<\/h2>/gi;
             const info = /<h3>(.*)<\/h3>/gi;
 
-            const h1 = desc.match(header) ? desc.match(header)[0].replace(/<[a-z0-9\/]+>/gi, '') : 'Untitled';
-            const h2 = desc.match(subheader) ? desc.match(subheader)[0].replace(/<[a-z0-9\/]+>/gi, '') : '';
-            const p = desc.match(info) ? desc.match(info)[0].replace(/<[a-z0-9\/]+>/gi, '') : '';
+            const h1 = desc.match(header) ? desc.match(header)[0].replace(/<[a-z0-9/]+>/gi, '') : 'Untitled';
+            const h2 = desc.match(subheader) ? desc.match(subheader)[0].replace(/<[a-z0-9/]+>/gi, '') : '';
+            const p = desc.match(info) ? desc.match(info)[0].replace(/<[a-z0-9/]+>/gi, '') : '';
 
             return(
                 <div id="mainCard">
@@ -52,7 +50,7 @@ class RSSWidget extends React.Component{
                         <div id="fullCard">
                             {parseDescription(listing.description)}
                         <div id="mainCard">
-                            <img src={listing.thumbnail} />
+                            <img src={ listing.thumbnail } alt={""}/>
                         </div>
                         </div>
                     );
@@ -74,27 +72,5 @@ class RSSWidget extends React.Component{
     }
 
 }
-function RSS(feedURL) {
-    const [initialised, setInitialised] = useState(false);
-    const [url, setURL] = useState(feedURL);
-    const [listings, setListings] = useState([]);
-    const [data, setData] = useState({});
 
-    const getListings = async url => {
-        try {
-            const resp = await getFeedListing(url);
-            setListings(resp.data.items);
-            setData(resp.data.feed);
-        } catch (e) {
-            console.log(e);
-        }
-    };
-
-    return (
-        <div>
-            <img src={data.image} /> {data.title}
-
-        </div>
-    );
-}
 export default RSSWidget;

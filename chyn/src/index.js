@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {Header, Carousel, BestDressed} from './App';
+import {Header, BestDressed} from './App';
 import * as serviceWorker from './serviceWorker';
-import RSSWidget from './rss/RSSReader'
 
 ReactDOM.render(
   <React.StrictMode>
