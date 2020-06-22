@@ -147,9 +147,11 @@ function RenderContent(props){
         return <BestDressed />
     } else if(url === "/rants"){
         return <Rants />
+    } else if(url === "/"){
+        return <Home />
     }
     else{
-        return <Home />
+        return (<div id="mainText"><h1>Pls stop navigating to different pages...</h1></div>)
     }
 }
 
