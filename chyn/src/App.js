@@ -93,7 +93,7 @@ class Rants extends React.Component {
                     <br/>I'm only still typing to fill white space so that this page looks prettier.
                     <hr/>
             </div>
-                <GenericRSS url="https://amateurish.tumblr.com/tagged/ramble/rss?6" title="A few rabit holes later..." />
+                <GenericRSS url="https://amateurish.tumblr.com/tagged/ramble/rss" title="A few rabit holes later..." />
             </div>
             )
     }

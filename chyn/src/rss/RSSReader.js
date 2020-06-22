@@ -20,7 +20,7 @@ class GenericRSS extends React.Component{
                 function parseDescription(desc){
             const youtube = /<youtube>(.*?)<\/youtube>(.*)/si;
 
-            const urlLength = desc.match(youtube)[1].length
+            const urlLength = desc.match(youtube) ? desc.match(youtube)[1].length : 0
             const youtubeURL = desc.match(youtube) ? desc.match(youtube)[1].substring(1, urlLength-1): '';
             const youtubeDesc = desc.match(youtube) ? desc.match(youtube)[2]: '';
             if (youtubeURL !== ''){

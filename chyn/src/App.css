@@ -142,6 +142,26 @@ body {
   font-family: Heebo;
 }
 
+#container a{
+  color: var(--dark-main);
+  text-decoration: none;
+  background-color: var(--bright-accent);
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -ms-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+}
+
+#container a:hover{
+  color: var(--dark-main);
+  text-decoration: none;
+  background-color: var(--main-accent);
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -ms-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+}
+
 #pageBio {
   width: 100%;
   height: 200px;
