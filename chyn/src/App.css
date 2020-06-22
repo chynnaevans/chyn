@@ -80,6 +80,37 @@ body {
   font-weight: 300;
 }
 
+#header a {
+  margin-top:26px;
+  position: static;
+  float: left;
+  padding: 10px;
+  color: var(--dark-main);
+  text-decoration: none;
+  font-family: Heebo;
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -ms-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+}
+
+#header a:hover{
+  border-bottom: var(--main-accent) 3px solid;
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -ms-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+}
+
+.active {
+  border-bottom: var(--main-accent) 3px solid;
+}
+
+#nicknames {
+  width: 200px;
+  float: left;
+}
+
 #container {
   width:100%;
   height: 100%;
@@ -209,4 +240,8 @@ body {
 
 #tumblr description {
   font-size:1000px;
+}
+
+#blogText {
+  padding: 20px;
 }

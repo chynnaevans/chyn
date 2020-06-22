@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {Header, BestDressed} from './App';
+import {Header, RenderContent} from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
@@ -13,7 +13,7 @@ ReactDOM.render(
 
 ReactDOM.render(
     <React.StrictMode>
-        <BestDressed />
+        <RenderContent url={window.location.pathname} />
     </React.StrictMode>,
     document.getElementById('container')
 );

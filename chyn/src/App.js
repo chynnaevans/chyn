@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import TextLoop from "react-text-loop";
-import RSSWidget from "./rss/RSSReader";
+import {RSSWidget, GenericRSS} from "./rss/RSSReader";
 
 // Carousel images
 import sjp from './11-sjp-savagebeauty.jpg'
@@ -37,7 +37,9 @@ class Header extends React.Component {
     render(){
         return(
             <div id="header">
-            <Title />
+            <div id="nicknames"><Title /></div>
+            <a href="/" class={window.location.pathname === "/" ? "active" : ""}>Met Gala</a>
+            <a href="/newPage" class={window.location.pathname === "/newPage" ? "active" : "" }>Ramblings</a>
             </div>
         )
     }
@@ -72,5 +74,27 @@ class BestDressed extends React.Component {
     }
 }
 
+class Ramblings extends React.Component {
+    render(){
+        return(
+            <div id="container">
+                <GenericRSS url="https://amateurish.tumblr.com/tagged/ramble/rss?6" title="A few rabit holes later..." />
+            </div>
+            )
+    }
+}
+
+function RenderContent(props){
+    const url = props.url
+    if(url == "/"){
+        return <BestDressed />
+    } else if(url == "/newPage"){
+        return <Ramblings />
+    }
+    else{
+        return <Ramblings />
+    }
+}
+
 // export default Header;
-export {Header, BestDressed};
+export {Header, RenderContent};

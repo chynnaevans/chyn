@@ -4,6 +4,65 @@ const axios = require("axios");
 const corsUrl = "https://api.rss2json.com/v1/api.json?rss_url=";
 export const getFeedListing = url => axios.get(`${corsUrl}${url}`);
 
+class GenericRSS extends React.Component{
+        constructor(props) {
+        super(props);
+        this.state = {
+            url: props.url,
+            listings: [],
+            data: {},
+            pageTitle: props.title,
+            query: (props.category === '' ? '' : '?category=' + props.cateogry),
+        }
+    }
+    render(){
+        const listings = this.state.listings.slice()
+                function parseDescription(desc){
+            const youtube = /<youtube>(.*?)<\/youtube>(.*)/si;
+
+            const urlLength = desc.match(youtube)[1].length
+            const youtubeURL = desc.match(youtube) ? desc.match(youtube)[1].substring(1, urlLength-1): '';
+            const youtubeDesc = desc.match(youtube) ? desc.match(youtube)[2]: '';
+            if (youtubeURL != ''){
+                return(
+                    
+                    <div><iframe width="560" height="315" src={youtubeURL} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div dangerouslySetInnerHTML={{ __html: youtubeDesc }} />
+                    </div>
+                    )
+            }
+            else{
+                return(
+                    <div dangerouslySetInnerHTML={{ __html: desc }} />
+                    )
+            }
+        }
+
+        return(<div id="blogText">
+         {listings.map((listing, item) => {
+                    return(
+                        <div id="fullCard">
+                        {parseDescription(listing.description)}
+                        </div>
+                    );
+                })}
+        </div>
+        )
+    }
+
+    async componentDidMount(){
+        try {
+            const resp = await getFeedListing(this.state.url + this.state.query);
+            this.setState({
+                listings: resp.data.items,
+                data: resp.data.feed,
+            })
+        } catch (e) {
+            console.log(e);
+        }
+    }
+}
+
 class RSSWidget extends React.Component{
     constructor(props) {
         super(props);
@@ -73,4 +132,4 @@ class RSSWidget extends React.Component{
 
 }
 
-export default RSSWidget;
+export { RSSWidget, GenericRSS };
