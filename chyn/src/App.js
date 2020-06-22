@@ -38,8 +38,8 @@ class Header extends React.Component {
         return(
             <div id="header">
             <div id="nicknames"><Title /></div>
-            <a href="/" class={window.location.pathname === "/" ? "active" : ""}>Met Gala</a>
-            <a href="/newPage" class={window.location.pathname === "/newPage" ? "active" : "" }>Ramblings</a>
+            <a href="/metgala" class={window.location.pathname === "/" ? "active" : ""}>Met Gala</a>
+            <a href="/rants" class={window.location.pathname === "/rants" ? "active" : "" }>Rants</a>
             </div>
         )
     }
@@ -78,6 +78,13 @@ class Ramblings extends React.Component {
     render(){
         return(
             <div id="container">
+            <div id="pageBio">
+                    <h1><span>Random Deep Dives & Rants</span></h1>
+                    <br/>This is just a page, connected to a blog, where I can rant and get excited.
+                    <br/>Recent deep dives have been: diversity in the music industry, algorithm classification, and links between mental health and technology.
+                    <br/>I'm only still typing to fill white space so that this page looks prettier.
+                    <hr/>
+            </div>
                 <GenericRSS url="https://amateurish.tumblr.com/tagged/ramble/rss?6" title="A few rabit holes later..." />
             </div>
             )
@@ -86,9 +93,9 @@ class Ramblings extends React.Component {
 
 function RenderContent(props){
     const url = props.url
-    if(url == "/"){
+    if(url == "/metgala"){
         return <BestDressed />
-    } else if(url == "/newPage"){
+    } else if(url == "/rants"){
         return <Ramblings />
     }
     else{

@@ -38,14 +38,18 @@ class GenericRSS extends React.Component{
             }
         }
 
-        return(<div id="blogText">
-         {listings.map((listing, item) => {
-                    return(
-                        <div id="fullCard">
-                        {parseDescription(listing.description)}
-                        </div>
-                    );
-                })}
+        return(
+        <div id="mainText">
+            <div id="fullCard">
+             {listings.map((listing, item) => {
+                        return(
+                            <div id="fullCard">
+                            {parseDescription(listing.description)}
+                            <hr/>
+                            </div>
+                        );
+                    })}
+            </div>
         </div>
         )
     }

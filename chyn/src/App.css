@@ -142,6 +142,45 @@ body {
   font-family: Heebo;
 }
 
+#pageBio {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  padding: 10px;
+  padding-left: 30px;
+  float:left;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#pageBio hr {
+  width: 95%;
+  margin-left: 0px;
+  border-top: var(--main-accent) 3px solid;
+  bottom: 20px;
+  position: absolute;
+  background-color: white;
+}
+
+#pageBio h1 {
+  font-weight: 500;
+  font-size: 30px;
+  background-size: 50%;
+  font-family: Heebo;
+}
+
+#pageBio span{
+  line-height: 15px;
+  position: static;
+  float:left;
+  background-color: var(--main-accent);
+}
+
+#pageBio p {
+  font-size: 20px;
+}
+
 #carousel {
   width: 100%;
   height: 50%;
@@ -207,7 +246,7 @@ body {
   padding-bottom: 150px;
 }
 #fullCard {
-  width: 100%;
+  width: 98%;
 }
 #mainCard {
   width: 40%;
