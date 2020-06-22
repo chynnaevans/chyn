@@ -10,6 +10,12 @@ import beyonce from './13-beyonce-punk.jpg'
 import blake from './14-blakelively.jpeg'
 import zendaya from './15-zendaya.jpg'
 
+import abby from './abbyscuito.jpg'
+import margaret from './margaret_hamilton.jpg'
+import matt from './mattgroening.jpg'
+import amcqueen from './mcqueen.jpg'
+import ss99 from './mcqueenss99.jpg'
+
 const nicknames = ['chynna', 'chyn', 'chy', 'chunna'];
 
 class Title extends React.Component {
@@ -38,14 +44,16 @@ class Header extends React.Component {
         return(
             <div id="header">
             <div id="nicknames"><Title /></div>
-            <a href="/metgala" class={window.location.pathname === "/" ? "active" : ""}>Met Gala</a>
+            <a href="/" class={window.location.pathname === "/" ? "active" : ""}>Home</a>
+            <a href="/metgala" class={window.location.pathname === "/metgala" ? "active" : ""}>Met Gala</a>
             <a href="/rants" class={window.location.pathname === "/rants" ? "active" : "" }>Rants</a>
+            <a href="mailto:chynna06@gmail.com?subject=yeet">Contact</a>
             </div>
         )
     }
 }
 
-class Carousel extends React.Component {
+class MetCarousel extends React.Component {
     render(){
         return(
             <div id="carousel">
@@ -67,14 +75,14 @@ class BestDressed extends React.Component {
     render(){
         return(
            <div id="container">
-               <Carousel />
+               <MetCarousel />
                <RSSWidget url="https://amateurish.tumblr.com/tagged/metgalaoutfits/rss" title="All Time Best Dressed" />
            </div>
         )
     }
 }
 
-class Ramblings extends React.Component {
+class Rants extends React.Component {
     render(){
         return(
             <div id="container">
@@ -90,16 +98,58 @@ class Ramblings extends React.Component {
             )
     }
 }
+class HomeCarousel extends React.Component {
+    render(){
+        return(
+            <div id="carousel">
+                <div id="infoBox">
+                    <h1>Chynna Evans</h1>
+                    <p>The TL;DR</p>
+                </div>
+                <img src={ss99} alt="McQueen SS99" />
+                <img src={abby} alt="Abby Sciutto, NCIS" />
+                <img src={margaret} alt="Magaret Hamilton" />
+                <img src={amcqueen} alt="Alexander McQueen" />
+                <img src={matt} alt="Matt Groening" />
+            </div>
+        )
+    }
+}
+
+class Home extends React.Component {
+    render(){
+        return(
+            <div id="container">
+                <HomeCarousel />
+                <div id="fullCard">
+                    <div id="homeText">
+                        <br/>
+                        <p>
+                            <small>(pls don't try and view this site on mobile)</small>
+                            <br/>
+                            Hi! I'm Chynna; an Australian software engineer based in NYC. 
+                            I love the backend side of data-heavy applications & learning about how different tech/architectures can solve (and create) weird problems.
+                             Also the front end. Also the infra. Actually, I just love learning about eng.
+                            <br/><br/>
+                            The only things that rival my love of computer science are fashion & gymnastics (and The Simpsons).
+                            Above are some of the people that have impacted my life and career in a huge way. I could speak about this forever. Hit me up if you want to chat!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            )
+    }
+}
 
 function RenderContent(props){
     const url = props.url
-    if(url == "/metgala"){
+    if(url === "/metgala"){
         return <BestDressed />
-    } else if(url == "/rants"){
-        return <Ramblings />
+    } else if(url === "/rants"){
+        return <Rants />
     }
     else{
-        return <Ramblings />
+        return <Home />
     }
 }
 

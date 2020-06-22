@@ -23,10 +23,10 @@ class GenericRSS extends React.Component{
             const urlLength = desc.match(youtube)[1].length
             const youtubeURL = desc.match(youtube) ? desc.match(youtube)[1].substring(1, urlLength-1): '';
             const youtubeDesc = desc.match(youtube) ? desc.match(youtube)[2]: '';
-            if (youtubeURL != ''){
+            if (youtubeURL !== ''){
                 return(
                     
-                    <div><iframe width="560" height="315" src={youtubeURL} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div><iframe title={youtubeURL} width="560" height="315" src={youtubeURL} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div dangerouslySetInnerHTML={{ __html: youtubeDesc }} />
                     </div>
                     )

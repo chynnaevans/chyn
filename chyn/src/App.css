@@ -245,6 +245,24 @@ body {
 
   padding-bottom: 150px;
 }
+
+#homeText {
+  float: left;
+  display: block;
+  clear: both;
+  position: static;
+  margin-bottom: 0px;
+
+  padding: 10px;
+  margin-left: 20%;
+  text-align: justify;
+  line-height: 1.5em;
+  width: 60%;
+  float: top;
+
+  padding-bottom: 150px;
+}
+
 #fullCard {
   width: 98%;
 }
