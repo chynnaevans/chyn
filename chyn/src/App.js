@@ -89,7 +89,7 @@ class Rants extends React.Component {
             <div id="pageBio">
                     <h1><span>Random Deep Dives & Rants</span></h1>
                     <br/>This is just a page, connected to a blog, where I can rant and get excited.
-                    <br/>Recent deep dives have been: diversity in the music industry, algorithm classification, and links between mental health and technology.
+                    <br/>You can expect deep dives on topics such as: diversity in the music industry, algorithm classification, and links between mental health and technology.
                     <br/>I'm only still typing to fill white space so that this page looks prettier.
                     <hr/>
             </div>
