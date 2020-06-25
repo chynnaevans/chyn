@@ -4,6 +4,6 @@ I had to take it a step further and spent a weekend teaching myself to make a we
 
 ![screen recording](/screenshot.gif)
 
-# It's now turned into a website!
+# It's now turned into a fully-fledged personal website!
 
-Check out [chyn.nyc](http://chyn.nyc) !!!
+Check out @ [chyn.nyc](http://chyn.nyc) !!!
