@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import TextLoop from "react-text-loop";
-import {RSSWidget, GenericRSS} from "./rss/RSSReader";
+import {MetGalaRSS, GenericRSS} from "./rss/RSSReader";
 
 // Carousel images
 import sjp from './11-sjp-savagebeauty.jpg'
@@ -76,7 +76,7 @@ class BestDressed extends React.Component {
         return(
            <div id="container">
                <MetCarousel />
-               <RSSWidget url="https://amateurish.tumblr.com/tagged/metgalaoutfits/rss" title="All Time Best Dressed" />
+               <MetGalaRSS url="https://amateurish.tumblr.com/tagged/metgalaoutfits/rss" title="All Time Best Dressed" />
            </div>
         )
     }
