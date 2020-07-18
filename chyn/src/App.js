@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import TextLoop from "react-text-loop";
 import {MetGalaRSS, GenericRSS} from "./rss/RSSReader";
+import {NameQuiz} from './ChooseYourName'
 
 // Carousel images
 import sjp from './11-sjp-savagebeauty.jpg'
@@ -125,7 +126,7 @@ class Home extends React.Component {
                     <div id="homeText">
                         <br/>
                         <p>
-                            <small>(pls don't try and view this site on mobile)</small>
+                            <small>(pls don't try and view this site on mobile, it won't be pretty)</small>
                             <br/>
                             Hi! I'm Chynna; an Australian software engineer based in NYC. 
                             I love the backend side of data-heavy applications & learning about how different tech/architectures can solve (and create) weird problems.
@@ -149,6 +150,8 @@ function RenderContent(props){
         return <Rants />
     } else if(url === "/"){
         return <Home />
+    } else if(url ==="/quiz"){
+        return <NameQuiz />
     }
     else{
         return (<div id="mainText"><h1>Pls stop navigating to different pages...</h1></div>)
