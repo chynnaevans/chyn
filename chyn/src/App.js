@@ -5,17 +5,17 @@ import {MetGalaRSS, GenericRSS} from "./rss/RSSReader";
 import {NameQuiz} from './ChooseYourName'
 
 // Carousel images
-import sjp from './11-sjp-savagebeauty.jpg'
-import renee from './12-reneezellweger.jpg'
-import beyonce from './13-beyonce-punk.jpg'
-import blake from './14-blakelively.jpeg'
-import zendaya from './15-zendaya.jpg'
+import sjp from './images/11-sjp-savagebeauty.jpg'
+import renee from './images/12-reneezellweger.jpg'
+import beyonce from './images/13-beyonce-punk.jpg'
+import blake from './images/14-blakelively.jpeg'
+import zendaya from './images/15-zendaya.jpg'
 
-import abby from './abbyscuito.jpg'
-import margaret from './margaret_hamilton.jpg'
-import matt from './mattgroening.jpg'
-import amcqueen from './mcqueen.jpg'
-import ss99 from './mcqueenss99.jpg'
+import abby from './images/abbyscuito.jpg'
+import margaret from './images/margaret_hamilton.jpg'
+import matt from './images/mattgroening.jpg'
+import amcqueen from './images/mcqueen.jpg'
+import ss99 from './images/mcqueenss99.jpg'
 
 const nicknames = ['chynna', 'chyn', 'chy', 'chunna'];
 
@@ -90,7 +90,7 @@ class Rants extends React.Component {
             <div id="pageBio">
                     <h1><span>Random Deep Dives & Rants</span></h1>
                     <br/>This is just a page, connected to a blog, where I can rant and get excited.
-                    <br/>You can expect deep dives on topics such as: diversity in the music industry, algorithm classification, and links between mental health and technology.
+                    <br/>Since COVID took away my regular random discussions with friends about fun things, I'm letting my brain dumps out here.
                     <br/>I'm only still typing to fill white space so that this page looks prettier.
                     <hr/>
             </div>
