@@ -93,12 +93,41 @@ app.get('/callback', (req, resp) => {
 
 		} else {
 			resp.redirect('/#' + querystring.stringify({
-				error: 'invalid_token' + err
+				error: 'invalid_token'
 			}));
 		}
 	});
 
 	}
+});
+
+// Refresh token
+app.get('/refresh_token', (req, resp) => {
+	var refresh_token = req.query.refresh_token;
+	var authOpts = {
+		url: 'https://accounts.spotify.com/api/token',
+			form: {
+				grant_type: 'refresh_token',
+				refresh_token: refresh_token
+			},
+			headers: {
+				'Authorization': 'Basic ' + (Buffer.from(secrets.client_id + ':' + secrets.client_secret).toString('base64'))
+			},
+			json: true
+	};
+
+	request.post(authOpts, (error, response, body) => {
+		if( !error && response.statusCode === 200) {
+			var access_token = body.access_token;
+			res.send({
+				'access_token': access_token
+			});
+		} else {
+			resp.redirect('/#' + querystring.stringify({
+				error: 'error'
+			}))
+		}
+	});
 });
 
 console.log('Listening on 8888');
