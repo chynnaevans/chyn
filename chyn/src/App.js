@@ -3,6 +3,7 @@ import './App.css';
 import TextLoop from "react-text-loop";
 import {MetGalaRSS, GenericRSS} from "./rss/RSSReader";
 import {NameQuiz} from './ChooseYourName'
+import {MyStory} from './MyStory'
 
 // Carousel images
 import sjp from './images/11-sjp-savagebeauty.jpg'
@@ -17,7 +18,7 @@ import matt from './images/mattgroening.jpg'
 import amcqueen from './images/mcqueen.jpg'
 import ss99 from './images/mcqueenss99.jpg'
 
-const nicknames = ['chynna', 'chyn', 'chy', 'chunna'];
+const nicknames = ['chynna', 'chyn', 'chy'];
 
 class Title extends React.Component {
     render() {
@@ -152,6 +153,8 @@ function RenderContent(props){
         return <Home />
     } else if(url ==="/quiz"){
         return <NameQuiz />
+    } else if(url === "/story"){
+        return <MyStory />
     }
     else{
         return (<div id="mainText"><h1>Pls stop navigating to different pages...</h1></div>)
