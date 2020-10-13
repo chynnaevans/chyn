@@ -20,7 +20,7 @@
 #nicknames h1 {
   color: var(--main-accent);
   font-size:40px;
-  line-height: 40px;
+  line-height: 30px;
   vertical-align: middle;
   font-family: Heebo;
   font-weight: 300;
@@ -30,11 +30,47 @@
 #nicknames h2 {
   color: lightgrey;
   font-size:40px;
-  line-height: 40px;
+  line-height: 30px;
   vertical-align: middle;
   font-family: Heebo;
   font-weight: 300;
 }
+
+.active {
+  border-bottom: var(--main-accent) 3px solid;
+}
+
+/* Web */
+#headerWeb {
+  height: 20%;
+  min-height: 100px;
+  background-color: white;
+  width: 100%;
+  padding: 1%;
+}
+
+#headerWeb a {
+  margin-top:26px;
+  position: static;
+  float: left;
+  padding: 10px;
+  color: var(--dark-main);
+  text-decoration: none;
+  font-family: Heebo;
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -ms-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+}
+
+#headerWeb a:hover{
+  border-bottom: var(--main-accent) 3px solid;
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -ms-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+}
+
 
 /* Mobile */
 #headerMobile {
@@ -46,7 +82,7 @@
 }
 
 #headerMobile #nicknames {
-  margin-left: 50px;
+  margin-left: 60px;
 }
 
 /* Hamburger menu */
@@ -57,7 +93,7 @@
   width: 36px;
   height: 30px;
   left: 36px;
-  top: 36px;
+  top: 33px;
 }
 
 /* Color/shape of burger icon bars */
@@ -78,7 +114,8 @@
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: white;
+  background: var(--dark-main);
+  overflow: hidden;
 }
 
 /*

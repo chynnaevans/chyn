@@ -62,7 +62,7 @@ class Header extends React.Component {
 				)
 		} else {
 		return (
-			<div id="header">				
+			<div id="headerWeb">				
 				<div id="nicknames"> <RotatingText names={names} /> </div>
 				<HeaderLinks />
 			</div>
