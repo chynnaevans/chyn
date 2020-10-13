@@ -45,13 +45,13 @@ class Header extends React.Component {
     render(){
         return(
             <div id="header">
-            <div id="nicknames"><Title /></div>
-            <a href="/" class={window.location.pathname === "/" ? "active" : ""}>Home</a>
-            <a href="/metgala" class={window.location.pathname === "/metgala" ? "active" : ""}>Met Gala</a>
-            <a href="/rants" class={window.location.pathname === "/rants" ? "active" : "" }>Rants</a>
-            <a href="mailto:chynna06@gmail.com?subject=yeet">Contact</a>
+                <div id="nicknames"><Title /></div>
+                <a href="/" class={window.location.pathname === "/" ? "active" : ""}>Home</a>
+                <a href="/metgala" class={window.location.pathname === "/metgala" ? "active" : ""}>Met Gala</a>
+                <a href="/rants" class={window.location.pathname === "/rants" ? "active" : "" }>Rants</a>
+                <a href="mailto:chynna06@gmail.com?subject=yeet">Contact</a>
             </div>
-        )
+        )    
     }
 }
 
@@ -90,8 +90,8 @@ class Rants extends React.Component {
             <div id="container">
             <div id="pageBio">
                     <h1><span>Random Deep Dives & Rants</span></h1>
-                    <br/>This is just a page, connected to a blog, where I can rant and get excited.
-                    <br/>Since COVID took away my regular random discussions with friends about fun things, I'm letting my brain dumps out here.
+                    <br/>Hi, I talk alot and since COVID, I haven't had the opportunity to do that so much.
+                    <br/>Here are some spontaneous brain dumps and/or fun things that I've worked on.
                     <br/>I'm only still typing to fill white space so that this page looks prettier.
                     <hr/>
             </div>
@@ -127,14 +127,15 @@ class Home extends React.Component {
                     <div id="homeText">
                         <br/>
                         <p>
-                            <small>(pls don't try and view this site on mobile, it won't be pretty)</small>
+                            <small>(This website will not be pretty on mobile and I'm very aware of that. I've never done frontend before... I'm working on it)</small>
                             <br/>
-                            Hi! I'm Chynna; an Australian software engineer based in NYC. 
-                            I love the backend side of data-heavy applications & learning about how different tech/architectures can solve (and create) weird problems.
-                             Also the front end. Also the infra. Actually, I just love learning about eng.
-                            <br/><br/>
-                            The only things that rival my love of computer science are fashion & gymnastics (and The Simpsons).
-                            Above are some of the people that have impacted my life and career in a huge way. I could speak about this forever. Hit me up if you want to chat!
+                            Hello!! I'm Chynna – an Australian living in NYC. I've created this website because:
+                            <ol type="a">
+                                <li>I'm bored</li>
+                                <li>I'm a software engineer & software engineers need their own website, right??</li>
+                            </ol>
+                            <br/>
+                            The people/pictures above pretty well sum up the things I love and who I am. From left to right: Alexander McQueen SS'99 show, Abby Sciutto (NCIS), Margaret Hamilton, Alexander McQueen, Matt Groening.
                         </p>
                     </div>
                 </div>
