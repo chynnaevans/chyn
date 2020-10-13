@@ -2,14 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import {Header, RenderContent} from './App';
-import { Header } from './Header.js';
+import { Page } from './FullPage'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
 
-    <Header isMobile={true}/>
-  </React.StrictMode>,
+    <Page />  </React.StrictMode>,
   document.getElementById('root')
 );
 
