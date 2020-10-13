@@ -1,0 +1,146 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;500&display=swap');
+
+:root {
+  --main-accent: #E0B0D5;
+  --faded-accent: #E5D0E3;
+  --dark-accent: #19647E;
+  --bright-accent: #AEE5D8;
+  --dark-main: #37392E;
+  font-family: Heebo;
+  font-weight: 300;
+}
+
+/* Header Default */
+#nicknames {
+  width: 200px;
+  float: left;
+}
+
+#nicknames h1 {
+  color: var(--main-accent);
+  font-size:40px;
+  line-height: 40px;
+  vertical-align: middle;
+  font-family: Heebo;
+  font-weight: 300;
+  padding-top: 5px;
+}
+
+#nicknames h2 {
+  color: lightgrey;
+  font-size:40px;
+  line-height: 40px;
+  vertical-align: middle;
+  font-family: Heebo;
+  font-weight: 300;
+}
+
+/* Mobile */
+#headerMobile {
+  height: 20%;
+  min-height: 100px;
+  background-color: white;
+  width: 100%;
+  display: flex;
+}
+
+#headerMobile #nicknames {
+  margin-left: 50px;
+}
+
+/* Hamburger menu */
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: relative;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: var(--faded-accent);
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: lightgrey;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: white;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: white;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: lightgrey);
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  margin-top:2px;
+  position: static;
+  padding: 10px;
+  color: var(--dark-main);
+  text-decoration: none;
+  font-family: Heebo;
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -ms-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+}
+
+.bm-item:focus {
+  border-left: var(--main-accent) 3px solid;
+  outline:none;
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -ms-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+}
+
+.bm-item:hover {
+   border-left: lightgrey 3px solid;
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -ms-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0,0,0,0.3);
+}

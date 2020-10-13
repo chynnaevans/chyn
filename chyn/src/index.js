@@ -1,22 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {Header, RenderContent} from './App';
+// import {Header, RenderContent} from './App';
+import { Header } from './Header.js';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
+
+    <Header isMobile={true}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-ReactDOM.render(
-    <React.StrictMode>
-        <RenderContent url={window.location.pathname} />
-    </React.StrictMode>,
-    document.getElementById('container')
-);
+// ReactDOM.render(
+//     <React.StrictMode>
+//         <RenderContent url={window.location.pathname} />
+//     </React.StrictMode>,
+//     document.getElementById('container')
+// );
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
