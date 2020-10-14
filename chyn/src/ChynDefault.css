@@ -76,7 +76,7 @@ h2 {
 }
 
 /* Web */
-.webActive {
+#headerWeb .webActive {
   border-bottom: var(--main-accent) 3px solid;
 }
 
@@ -86,6 +86,34 @@ h2 {
   background-color: white;
   width: 100%;
   padding: 1%;
+}
+
+ #headerWeb button {
+  outline: none;
+  font-family: Heebo;
+  font-weight: 300;
+  font-size: 18px;
+  background-color: white;
+  border: 0px;
+  margin-top:26px;
+  position: static;
+  float: left;
+  padding: 10px;
+  color: var(--dark-main);
+  text-decoration: none;
+  font-family: Heebo;
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -ms-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+}
+
+#headerWeb button:hover{
+  border-bottom: var(--main-accent) 3px solid;
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -ms-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
 }
 
 #headerWeb a {
@@ -213,7 +241,7 @@ h2 {
 
 
 /* Mobile */
-.mobileActive {
+#headerMobile .mobileActive {
   border-left: var(--main-accent) 3px solid;
 }
 
@@ -223,6 +251,16 @@ h2 {
   background-color: white;
   width: 100%;
   display: flex;
+}
+
+#headerMobile button {
+  background-color: white;
+  float: top;
+  position: relative;
+  font-size: 1em;
+  border: 0px;
+  font-weight: 300;
+
 }
 
 #headerMobile #nicknames {
@@ -239,6 +277,7 @@ h2 {
   left: 36px;
   top: 33px;
 }
+
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
@@ -280,6 +319,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: white;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
+  overflow-y: hidden;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -291,6 +331,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-item-list {
   color: lightgrey);
   padding: 0.8em;
+  overflow: hidden;
 }
 
 /* Individual item */

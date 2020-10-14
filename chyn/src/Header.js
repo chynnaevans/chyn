@@ -23,39 +23,38 @@ class HamburgerMenu extends React.Component {
 	render() {
 		return (
 			<Menu>
-	            <a href="/" className={window.location.pathname === "/" ? "mobileActive" : ""}>Home</a>
-	            <a href="/metgala" className={window.location.pathname === "/metgala" ? "mobileActive" : ""}>Met Gala</a>
-	            <a href="/rants" className={window.location.pathname === "/rants" ? "mobileActive" : "" }>Rants</a>
+	            <button className={this.props.title === "Chynna Evans" ? "mobileActive" : "" }  onClick={() => this.props.homeClick()} >Home</button>
+	            <button className={this.props.title === "Met Gala 2020" ? "mobileActive" : "" } onClick={() => this.props.metClick()} >Met Gala</button>
+	            <button className={this.props.title === "Random Deep Dives & Rants" ? "mobileActive" : ""  } onClick={() => this.props.rantsClick()} >Rants</button>
 	            <a href="mailto:chynna06@gmail.com?subject=yeet">Contact</a>
 			</Menu>
 		)
 	}
 }
 
-function HeaderLinks() {
-		return (
+class HeaderLinks extends React.Component {
+		render() {
+			return (
 			<React.Fragment>
-				<a href="/" className={window.location.pathname === "/" ? "webActive" : ""}>Home</a>
-                <a href="/metgala" className={window.location.pathname === "/metgala" ? "webActive" : ""}>Met Gala</a>
-                <a href="/rants" className={window.location.pathname === "/rants" ? "webActive" : "" }>Rants</a>
+				<button className={this.props.title === "Chynna Evans" ? "webActive" : "" } onClick={() => this.props.homeClick()} >Home</button>
+                <button className={this.props.title === "Met Gala 2020" ? "webActive" : ""} onClick={() => this.props.metClick()} >Met Gala</button>
+                <button className={this.props.title === "Random Deep Dives & Rants" ? "webActive" : "" } onClick={() => this.props.rantsClick()} >Rants</button>
                 <a href="mailto:chynna06@gmail.com?subject=yeet">Contact</a>
             </React.Fragment>
 			)
+	}
 }
 
 class Header extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			isMobile: this.props.isMobile || false,
-		};
-	}
-
 	render() {
-		if (this.state.isMobile) {
+		if (this.props.isMobile === true) {
 			return (
 				<div id="headerMobile">				
-					<HamburgerMenu />
+					<HamburgerMenu 
+						title={this.props.title}
+						homeClick={() => this.props.homeClick()}
+						metClick={() => this.props.metClick()}
+						rantsClick={() => this.props.rantsClick()}/>
 					<div id="nicknames"> <RotatingText names={names} /> </div>
 					
 				</div>
@@ -64,7 +63,12 @@ class Header extends React.Component {
 		return (
 			<div id="headerWeb">				
 				<div id="nicknames"> <RotatingText names={names} /> </div>
-				<HeaderLinks />
+				<HeaderLinks 
+					title={this.props.title}
+					homeClick={() => this.props.homeClick()}
+					metClick={() => this.props.metClick()}
+					rantsClick={() => this.props.rantsClick()}
+				/>
 			</div>
 			)
 	}

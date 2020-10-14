@@ -32,10 +32,20 @@ class Page extends React.Component {
 		}
 	}
 
+	handleClick(button) {
+		this.setState({title:button});
+	}
+
 	render() {
 		return(
 			<React.Fragment>
-			<Header isMobile={this.state.isMobile} />
+			<Header 
+				isMobile={this.state.isMobile} 
+				title={this.state.title}
+				homeClick={() => this.handleClick("Chynna Evans")} 
+				metClick={() => this.handleClick("Met Gala 2020")}
+				rantsClick={() => this.handleClick("Random Deep Dives & Rants")}
+				/>
 			<div id="container">
 			<Carousel title={this.state.title} description={this.state.description} images={testImages}/>
 			<Content contentSource={home} />
