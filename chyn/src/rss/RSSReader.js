@@ -42,7 +42,7 @@ class GenericRSS extends React.Component{
         }
 
         return(
-        <div id="mainText">
+
             <div id="fullCard">
              {listings.map((listing, item) => {
                         return(
@@ -53,7 +53,6 @@ class GenericRSS extends React.Component{
                         );
                     })}
             </div>
-        </div>
         )
     }
 

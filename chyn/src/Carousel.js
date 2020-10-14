@@ -1,6 +1,8 @@
 import React from 'react';
 import './ChynDefault.css';
 
+import ReactMarkdown from 'react-markdown';
+
 class Carousel extends React.Component {
 	render() {
 		if(this.props.images !== null){
@@ -33,14 +35,33 @@ class CarouselInfo extends React.Component {
 	}
 
 class PageBio extends React.Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			description: null,
+		}
+	}
 	render() {
 		return(
 			<div id="pageBio">
 				<h1><span>{this.props.title}</span></h1>
-				<br/>{this.props.description}
+				<ReactMarkdown source={this.state.description}/>
 			<hr/>
 			</div>
 			)
+	}
+
+	componentDidMount() {
+		const readPath = this.props.description;
+		fetch(readPath)
+			.then(response => {
+				return response.text()
+			})
+			.then(text => {
+				this.setState({
+					description: text
+				})
+			})
 	}
 }
 
