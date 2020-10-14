@@ -23,9 +23,9 @@ class HamburgerMenu extends React.Component {
 	render() {
 		return (
 			<Menu>
-	            <a href="/" class={window.location.pathname === "/" ? "active" : ""}>Home</a>
-	            <a href="/metgala" class={window.location.pathname === "/metgala" ? "active" : ""}>Met Gala</a>
-	            <a href="/rants" class={window.location.pathname === "/rants" ? "active" : "" }>Rants</a>
+	            <a href="/" className={window.location.pathname === "/" ? "mobileActive" : ""}>Home</a>
+	            <a href="/metgala" className={window.location.pathname === "/metgala" ? "mobileActive" : ""}>Met Gala</a>
+	            <a href="/rants" className={window.location.pathname === "/rants" ? "mobileActive" : "" }>Rants</a>
 	            <a href="mailto:chynna06@gmail.com?subject=yeet">Contact</a>
 			</Menu>
 		)
@@ -35,9 +35,9 @@ class HamburgerMenu extends React.Component {
 function HeaderLinks() {
 		return (
 			<React.Fragment>
-				<a href="/" class={window.location.pathname === "/" ? "active" : ""}>Home</a>
-                <a href="/metgala" class={window.location.pathname === "/metgala" ? "active" : ""}>Met Gala</a>
-                <a href="/rants" class={window.location.pathname === "/rants" ? "active" : "" }>Rants</a>
+				<a href="/" className={window.location.pathname === "/" ? "webActive" : ""}>Home</a>
+                <a href="/metgala" className={window.location.pathname === "/metgala" ? "webActive" : ""}>Met Gala</a>
+                <a href="/rants" className={window.location.pathname === "/rants" ? "webActive" : "" }>Rants</a>
                 <a href="mailto:chynna06@gmail.com?subject=yeet">Contact</a>
             </React.Fragment>
 			)
@@ -47,7 +47,7 @@ class Header extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isMobile: this.props.isMobile ? this.props.isMobile !== null : false,
+			isMobile: this.props.isMobile || false,
 		};
 	}
 

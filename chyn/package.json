@@ -18,6 +18,7 @@
     "react-bootstrap": "^1.2.2",
     "react-burger-menu": "^2.8.0",
     "react-dom": "16.8.x",
+    "react-markdown": "^4.3.1",
     "react-native": "^0.63.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",

@@ -9,11 +9,46 @@
   --dark-main: #37392E;
   font-family: Heebo;
   font-weight: 300;
+  overflow:hidden;
 }
 
 body {
   overflow: hidden;
+  font-size: 18px;
+  color: var(--dark-main);
+  font-family: Heebo;
 }
+
+h2 {
+  color: var(--bright-accent);
+}
+
+#container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+}
+
+#fullCard {
+  float: left;
+  display: block;
+  clear: both;
+  position: relative;
+  margin-bottom: 0px;
+  padding: 10px;
+  margin-left: 20%;
+  text-align: justify;
+  line-height: 1.5em;
+  width: 60%;
+  float: top;
+  height: auto;
+  padding-bottom: 150px;
+  z-index: 1000;
+}
+
 
 /* Header Default */
 #nicknames {
@@ -40,11 +75,11 @@ body {
   font-weight: 300;
 }
 
-.active {
+/* Web */
+.webActive {
   border-bottom: var(--main-accent) 3px solid;
 }
 
-/* Web */
 #headerWeb {
   height: 20%;
   min-height: 100px;
@@ -79,7 +114,7 @@ body {
   width: 100%;
   height: 40%;
   min-height: 250px;
-  position: absolute;
+  position: relative;
   padding: 0px;
   float:left;
   flex-wrap: nowrap;
@@ -100,13 +135,88 @@ body {
   object-fit: cover;
   z-index: 1;
   min-width: 300px;
+  overflow: hidden;
 }
 
 #carousel img:last-child {
   padding-right: 0px;
 }
 
+#infoBox {
+  background-color: white;
+  height: 25%px;
+  width: 25%;
+  min-width: 300px;
+  z-index: 100;
+  position: absolute;
+  color: var(--main-dark);
+  bottom: 20px;
+  margin-left: 20px;
+  padding: 10px;
+  float: left;
+}
+
+#infoBox h1 {
+  line-height: 15px;
+  font-weight: 500;
+  font-size: 30px;
+  background-size: 70%;
+  background-color: var(--main-accent)
+}
+
+#infoBox p {
+  font-size: 20px;
+}
+
+#pageBio {
+  width: 95%;
+  height: 20%;
+  position: relative;
+  padding: 10px;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-left: 10px;
+  margin-right: 10px;
+  float:left;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#pageBio hr {
+  width: 90%;
+  margin-left: 0px;
+  border-top: var(--main-accent) 3px solid;
+  bottom: 20px;
+  position: absolute;
+  background-color: white;
+  overflow:none;
+}
+
+#pageBio h1 {
+  font-weight: 500;
+  font-size: 30px;
+  background-size: 50%;
+  font-family: Heebo;
+}
+
+#pageBio span{
+  line-height: 15px;
+  position: static;
+  float:left;
+  background-color: var(--main-accent);
+}
+
+#pageBio p {
+  font-size: 20px;
+}
+
+
 /* Mobile */
+.mobileActive {
+  border-left: var(--main-accent) 3px solid;
+}
+
 #headerMobile {
   height: 20%;
   min-height: 100px;
@@ -199,12 +309,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .bm-item:focus {
-  border-left: var(--main-accent) 3px solid;
   outline:none;
-  -webkit-transition: 0.1s ease-in-out;
-  -moz-transition: 0.1s ease-in-out;
-  -ms-transition: 0.1s ease-in-out;
-  -o-transition: 0.1s ease-in-out;
 }
 
 .bm-item:hover {
