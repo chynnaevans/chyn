@@ -19,10 +19,6 @@ body {
   font-family: Heebo;
 }
 
-h2 {
-  color: var(--bright-accent);
-}
-
 #container {
   position: absolute;
   width: 100%;
@@ -35,7 +31,7 @@ h2 {
 #fullCard {
   float: left;
   display: block;
-  clear: both;
+  clear: none;
   position: relative;
   margin-bottom: 0px;
   padding: 10px;
@@ -43,12 +39,37 @@ h2 {
   text-align: justify;
   line-height: 1.5em;
   width: 60%;
-  float: top;
+  float: left;
   height: auto;
   padding-bottom: 150px;
-  /*z-index: 1000;*/
+  z-index: 1000;
 }
 
+#fullCard img {
+  width: 100%;
+  max-width: 400px;
+  float: right;
+  padding: 15px;
+  padding-right: 0px;
+}
+
+#fullCard hr {
+  clear: both;
+  justify-content: center;
+  border-top: var(--faded-accent) 0.5px solid;
+}
+
+#fullCard  h2 {
+  color: var(--dark-main);
+  font-weight: 300;
+  font-size: 30px;
+  font-family: Heebo;
+}
+
+#fullCard  h3 {
+  color: var(--bright-accent);
+  font-family: Heebo;
+}
 
 /* Header Default */
 #nicknames {

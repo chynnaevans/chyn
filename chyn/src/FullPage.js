@@ -18,6 +18,7 @@ import renee from './images/12-reneezellweger.jpg';
 import beyonce from './images/13-beyonce-punk.jpg';
 import blake from './images/14-blakelively.jpeg';
 import zendaya from './images/15-zendaya.jpg';
+import metgala from './content/MetGala.md';
 
 /* Rants */
 import rantsDesc from './content/RantsDescription.md';
@@ -47,7 +48,7 @@ const allContent = {
 	"Met Gala 2020": {
 		"description": "In loving memory",
 		"images": metImages,
-		"content": null,
+		"content": metgala,
 	},
 	"Random Deep Dives & Rants": {
 		"description": rantsDesc,
@@ -66,32 +67,28 @@ class Page extends React.Component {
 			title: 'Chynna Evans',
 			description: 'The TL;DR',
 			carousel: homeImages,
-			content: allContent["Chynna Evans"]["content"],
+			content: null,
 		}
 	}
 
 	handleClick(button) {
-		if(allContent[button]["content"] !== null) {
-			this.setState({
+
+		fetch(allContent[button]["content"])
+			.then(response => {
+				return response.text()
+			})
+			.then(text => {
+				this.setState({
+					content: text,
 					title:button,
 					description: allContent[button]["description"],
 					carousel: allContent[button]["images"],
-					content: allContent[button]["content"],
-					});
-		} else {
-			this.setState({
-					title:button,
-					description: allContent[button]["description"],
-					carousel: allContent[button]["images"],
-					});
-			//TODO: <MetGalaRSS url="https://amateurish.tumblr.com/tagged/metgalaoutfits/rss" title="All Time Best Dressed" />
-		}
+				})
+			})
 
 	}
 
 	render() {
-
-		
 		return(
 			<React.Fragment>
 			<Header 
@@ -103,11 +100,23 @@ class Page extends React.Component {
 				/>
 			<div id="container">
 			<Carousel title={this.state.title} description={this.state.description} images={this.state.carousel}/>
-			<Content contentSource={home} />
+			<Content content={this.state.content} />
 			</div>
 			</React.Fragment>
 			)
 
+	}
+
+	componentDidMount() {
+		fetch(allContent["Chynna Evans"]["content"])
+			.then(response => {
+				return response.text()
+			})
+			.then(text => {
+				this.setState({
+					content: text,
+				})
+			})
 	}
 
 }
