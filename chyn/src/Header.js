@@ -30,8 +30,8 @@ class HamburgerMenu extends React.Component {
 	            <button className={this.props.title === "Met Gala 2020" ? "mobileActive" : "" } onClick={() => this.props.metClick()} >Met Gala</button>
 	            <button className={this.props.title === "Random Deep Dives & Rants" ? "mobileActive" : ""  } onClick={() => this.props.rantsClick()} >Rants</button>
 	            <a href="mailto:chynna06@gmail.com?subject=yeet">Contact</a>
-                <a href="http://github.com/chynnaevans"><img src={github}/></a>
-                <a href="https://www.linkedin.com/in/chynnaevans/"><img src={linkedin}/></a>
+                <a href="http://github.com/chynnaevans"><img src={github} alt="Github logo"/></a>
+                <a href="https://www.linkedin.com/in/chynnaevans/"><img src={linkedin} alt="LinkedIn logo"/></a>
 			</Menu>
 		)
 	}
@@ -45,8 +45,8 @@ class HeaderLinks extends React.Component {
                 <button className={this.props.title === "Met Gala 2020" ? "webActive" : ""} onClick={() => this.props.metClick()} >Met Gala</button>
                 <button className={this.props.title === "Random Deep Dives & Rants" ? "webActive" : "" } onClick={() => this.props.rantsClick()} >Rants</button>
                 <a href="mailto:chynna06@gmail.com?subject=yeet">Contact</a>
-                <a href="http://github.com/chynnaevans"><img src={github}/></a>
-                <a href="https://www.linkedin.com/in/chynnaevans/"><img src={linkedin}/></a>
+                <a href="http://github.com/chynnaevans"><img src={github} alt="Github logo"/></a>
+                <a href="https://www.linkedin.com/in/chynnaevans/"><img src={linkedin} alt="LinkedIn logo"/></a>
             </React.Fragment>
 			)
 	}
