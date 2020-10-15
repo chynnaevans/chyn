@@ -24,6 +24,14 @@ import metgala from './content/MetGala.md';
 import rantsDesc from './content/RantsDescription.md';
 import rants from './content/Rants.md';
 
+/* WTF */
+import wtf from './content/WTF.md';
+import bartvlisa from './images/bartvlisa.jpg';
+import coollisa from './images/cool-lisa.png';
+import homerfermat from './images/homerfermat.png';
+import knifeyspoony from './images/knifeyspoony.jpeg';
+import milhouse from './images/milhouse.jpg';
+
 const homeImages = {
 	"Alexander McQueen SS99": ss99,
 	"Abby Sciutto": abby,
@@ -38,6 +46,14 @@ const metImages = {
 	"Beyonce 2013": beyonce,
 	"Blake Lively 2014": blake,
 	"Zendaya 2015": zendaya,
+}
+
+const wtfImages = {
+	"Cool Lisa": coollisa,
+	"Everything's coming up Milhouse": milhouse,
+	"Homer Fermat's Last Theorem": homerfermat,
+	"Bart v Lisa": bartvlisa,
+	"Knifey Spoony Game": knifeyspoony,
 }
 
 const allContent = {
@@ -55,6 +71,11 @@ const allContent = {
 		"description": rantsDesc,
 		"images": null,
 		"content": rants,
+	},
+	"Why Am I Here?": {
+		"description": "What's going on?",
+		"images": wtfImages,
+		"content": wtf,
 	}
 }
 
@@ -67,7 +88,7 @@ class Page extends React.Component {
 		this.state={
 			isMobile: true ? window.innerWidth <= 780 : false,
 			title: 'Chynna Evans',
-			description: 'The TL;DR',
+			description: 'Unexpected Error',
 			carousel: homeImages,
 			content: null,
 		}
@@ -110,17 +131,13 @@ class Page extends React.Component {
 	}
 
 	componentDidMount() {
-		fetch(allContent["Chynna Evans"]["content"])
-			.then(response => {
-				return response.text()
-			})
-			.then(text => {
-				this.setState({
-					content: text,
-				})
-			})
-	}
+		if(window.location.pathname === "/whyamihere") {
+			this.handleClick("Why Am I Here?");
+		} else {
+			this.handleClick("Chynna Evans");
+		}
 
+	}
 }
 
 export { Page };

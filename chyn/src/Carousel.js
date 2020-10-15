@@ -10,7 +10,7 @@ class Carousel extends React.Component {
 				<div id="carousel">
 				<CarouselInfo title={this.props.title} description={this.props.description} />
 				{Object.keys(this.props.images).map((img, pos) => {
-					return(<img alt={img} src={this.props.images[img]} />)
+					return(<img key={img} alt={img} src={this.props.images[img]} />)
 				})}
 				</div>
 				)
