@@ -1,5 +1,7 @@
 # All Time Best Dressed
 
+As we're all aware (/s) the 2020 Met Gala ball was taken from our lives by COVID-19. My friends and I decided to prepare slide decks to present, analyse, and discuss our favourite looks over the lifetime of the Met Gala Ball. Being who I am, I built an entire website instead of a slide deck and that's why we have chyn.nyc today!! Here's the presentation I gave:
+
 ![Stella Maxwell](https://64.media.tumblr.com/d9af5f533618455d26f9c88067928a1b/c57eeb592f29f379-1e/s1280x1920/bd3e9da274af002c337df2051ea30281f8ed19d0.jpg)
 
 ## #8 Stella Maxwell | Camp: Notes on Fashion
@@ -41,7 +43,7 @@ The Met Gala Ball is the only time of year that you can dress up like a gigantic
 ## #4 Cara Delevingne | Punk: Chaos to Couture
 ### Burberry
 
-Even though this is sitting at #4, it's actually my all time favourite Met Gala look. Ever. Everything The dress is perfect for the theme; the silhouette is simple and elegant, while the deep plunge & heavy studding gives it a super badass punk look. Cara's eye black smokey eye, black nailpolish, and half-back hair completes the look. It's 7 years later and I'm still obsessed.
+Even though this is sitting at #4, it's actually my all time favourite Met Gala look. Ever. The dress is perfect for the theme; the silhouette is simple and elegant, while the deep plunge & heavy studding gives it a super badass punk look. Cara's black smokey eye, black nailpolish, and half-back hair completes the look. It's 7 years later and I'm still obsessed.
 
 ----
 

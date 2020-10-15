@@ -22,6 +22,7 @@ import metgala from './content/MetGala.md';
 
 /* Rants */
 import rantsDesc from './content/RantsDescription.md';
+import rants from './content/Rants.md';
 
 const homeImages = {
 	"Alexander McQueen SS99": ss99,
@@ -53,6 +54,7 @@ const allContent = {
 	"Random Deep Dives & Rants": {
 		"description": rantsDesc,
 		"images": null,
+		"content": rants,
 	}
 }
 
